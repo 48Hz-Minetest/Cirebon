@@ -1,3 +1,4 @@
+import os
 import pico
 import sys
 import time
