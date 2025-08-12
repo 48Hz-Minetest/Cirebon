@@ -19,6 +19,7 @@ curl -o cirebon.py https://raw.githubusercontent.com/48Hz-Minetest/Cirebon/main/
 git clone https://github.com/48Hz-Minetest/Cirebon.git
 cd Cirebon
 cp cirebon.py ..
+cp pico.py ..
 cd ..
 rm -rf Cirebon
 ```
