@@ -1,8 +1,12 @@
 import pico
 import sys
+import time
 
 registers = {
     'A': 0, 'B': 0, 'C': 0, 'D': 0
+}
+modules = {
+    'task': False, 'os': False, 'utils': False
 }
 constants = {}
 stack = []
@@ -208,6 +212,53 @@ def execute(tokens, labels):
                     else:
                         print(f"Error: Unknown label '{label}'.")
                         break
+
+            elif command == '/include':
+                module = line_tokens[1]
+                if module == 'task':
+                    modules['task'] = True
+                elif module == 'pico':
+                    print("Error: The 'pico' module is in development and can't be used.")
+                    break
+                elif module == 'os':
+                    modules['os'] = True
+                elif module == 'utils':
+                    modules['utils'] = True
+                else:
+                    print(f"Error: Unknown module '{module}'")
+                    break
+
+            elif command == 'task.stop':
+                time_to_wait = line_tokens[1]
+                try:
+                    if modules["task"] == True:
+                        time.sleep(time_to_wait)
+                    else:
+                        print("Error: Module 'task' not included.")
+                        break
+                except ValueError:
+                    print("Error: Time must be integer or float.")
+                    break
+
+            elif command == 'os.system':
+                commandline = line_tokens[1]
+                if modules['os'] == True:
+                    os.system(commandline)
+                else:
+                    print("Error: Module 'os' not included.")
+                    break
+
+            elif command == 'utils.countto':
+                countto = line_tokens[1]
+                try:
+                    if modules['utils'] == True:
+                        for i in range(1, countto + 1):
+                            print(f"--> Counting to {countto}: {i}")
+                    else:
+                        print("Error: Module 'utils' not included")
+                        break
+                except ValueError:
+                    print("Error: Number to count must be an integer")
             
             else:
                 print(f"Error: Unknown command '{command}'")
@@ -244,7 +295,7 @@ if __name__ == "__main__":
                 print("echo            put string")
                 print("pico            enter Pico")
                 print("**********************************")
-                print("Cirebon 1.2                 Stable")
+                print("Cirebon 1.3                Testing")
                 print("MIT License")
                 print("Copyright (c) 2025 48Hz")
                 print("**********************************")
