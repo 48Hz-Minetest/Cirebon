@@ -17,6 +17,7 @@ curl -o cirebon.py https://raw.githubusercontent.com/48Hz-Minetest/Cirebon/main/
 (NEW) `git`:
 ```bash
 git clone https://github.com/48Hz-Minetest/Cirebon.git
+cd Cirebon
 cp cirebon.py ..
 cd ..
 rm -rf Cirebon
