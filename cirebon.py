@@ -250,11 +250,11 @@ if __name__ == "__main__":
                 print("Say Hi!                         :D")
             else:
                 print("Error: Invalid command.\nUse 'help', 'helpme' or 'h' to get help.")
-
-    file_path = sys.argv[1]
-    if not file_path.endswith('.cire'):
-        print("Error: Invalid file extension. Expected '.cire'.")
-        sys.exit(1)
+    else:
+        file_path = sys.argv[1]
+        if not file_path.endswith('.cire'):
+            print("Error: Invalid file extension. Expected '.cire'.")
+            sys.exit(1)
 
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
