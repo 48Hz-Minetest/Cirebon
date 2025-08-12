@@ -14,6 +14,13 @@ wget https://raw.githubusercontent.com/48Hz-Minetest/Cirebon/main/cirebon.py
 ```bash
 curl -o cirebon.py https://raw.githubusercontent.com/48Hz-Minetest/Cirebon/main/cirebon.py
 ```
+(NEW) `git`:
+```bash
+git clone https://github.com/48Hz-Minetest/Cirebon.git
+cp cirebon.py ..
+cd ..
+rm -rf Cirebon
+```
 2. Then you need to write a programm on it
 ```bash
 nano my_first_programm.cire
