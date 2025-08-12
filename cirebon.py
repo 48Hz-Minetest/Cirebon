@@ -228,14 +228,14 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         while True:
             terminput = input("Cirebon >>> ")
-            if terminput == "q" or "quit" or "exit":
+            if terminput == "q" or terminput == "quit" or terminput == "exit":
                 break
             elif terminput == "echo":
                 echoinput = input("echo >>> ")
                 print(f"--> String output: {echoinput}")
             elif terminput == "pico":
                 print("Pico is comming soon")
-            elif terminput == "help" or "helpme" or "h":
+            elif terminput == "help" or terminput == "helpme" or terminput == "h":
                 print("**********************************")
                 print("Help:")
                 print("q/quit/exit     exit cirebon shell")
