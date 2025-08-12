@@ -226,8 +226,25 @@ def execute(tokens, labels):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python cirebon.py <path_to_file.cire>")
-        sys.exit(1)
+        while True:
+            terminput = input("Cirebon >>> ")
+            if terminput == "q" or "quit" or "exit":
+                sys.exit(1)
+            elif terminput == "echo":
+                echoinput = input("echo >>> ")
+                print(f"--> String output: {echoinput}")
+            elif terminput == "pico":
+                print("Pico is comming soon")
+            elif terminput == "help" or "helpme" or "h":
+                print("**********************************")
+                print("Help:")
+                print("q/quit/exit     exit cirebon shell")
+                print("help/helpme/h   display this menu")
+                print("echo            put string")
+                print("pico            install Pico")
+                print("**********************************")
+            else:
+                print("Error: Invalid command.\nUse 'help', 'helpme' or 'h' to get help.")
 
     file_path = sys.argv[1]
     if not file_path.endswith('.cire'):
