@@ -256,13 +256,13 @@ if __name__ == "__main__":
             print("Error: Invalid file extension. Expected '.cire'.")
             sys.exit(1)
 
-    try:
-        with open(file_path, 'r', encoding='utf-8') as file:
-            code = file.read()
-            tokens = tokenize(code)
-            labels = find_labels(tokens)
-            execute(tokens, labels)
-    except FileNotFoundError:
-        print(f"Error: File '{file_path}' not found.")
-    except Exception as e:
-        print(f"An error occurred while reading or executing: {e}")
+        try:
+            with open(file_path, 'r', encoding='utf-8') as file:
+                code = file.read()
+                tokens = tokenize(code)
+                labels = find_labels(tokens)
+                execute(tokens, labels)
+        except FileNotFoundError:
+            print(f"Error: File '{file_path}' not found.")
+        except Exception as e:
+            print(f"An error occurred while reading or executing: {e}")
