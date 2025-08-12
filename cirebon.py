@@ -242,7 +242,7 @@ if __name__ == "__main__":
                 print("q/quit/exit     exit cirebon shell")
                 print("help/helpme/h   display this menu")
                 print("echo            put string")
-                print("pico            install Pico")
+                print("pico            enter Pico")
                 print("**********************************")
                 print("Cirebon 1.2                 Stable")
                 print("MIT License")
