@@ -243,6 +243,11 @@ if __name__ == "__main__":
                 print("echo            put string")
                 print("pico            install Pico")
                 print("**********************************")
+                print("Cirebon 1.1                 Stable")
+                print("MIT License")
+                print("Copyright (c) 2025 48Hz")
+                print("**********************************")
+                print("Say Hi!                         :D")
             else:
                 print("Error: Invalid command.\nUse 'help', 'helpme' or 'h' to get help.")
 
