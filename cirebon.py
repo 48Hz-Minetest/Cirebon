@@ -1,3 +1,4 @@
+import pico
 import sys
 
 registers = {
@@ -234,7 +235,7 @@ if __name__ == "__main__":
                 echoinput = input("echo >>> ")
                 print(f"--> String output: {echoinput}")
             elif terminput == "pico":
-                print("Pico is comming soon")
+                pico.mode()
             elif terminput == "help" or terminput == "helpme" or terminput == "h":
                 print("**********************************")
                 print("Help:")
@@ -243,7 +244,7 @@ if __name__ == "__main__":
                 print("echo            put string")
                 print("pico            install Pico")
                 print("**********************************")
-                print("Cirebon 1.1                 Stable")
+                print("Cirebon 1.2                 Stable")
                 print("MIT License")
                 print("Copyright (c) 2025 48Hz")
                 print("**********************************")
