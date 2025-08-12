@@ -229,7 +229,7 @@ if __name__ == "__main__":
         while True:
             terminput = input("Cirebon >>> ")
             if terminput == "q" or "quit" or "exit":
-                sys.exit(1)
+                break
             elif terminput == "echo":
                 echoinput = input("echo >>> ")
                 print(f"--> String output: {echoinput}")
